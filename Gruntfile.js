@@ -89,10 +89,7 @@ module.exports = function(grunt) {
       description: pkg.description,
       keywords: pkg.keywords,
       version: pkg.version,
-      author: {
-        name: pkg.author.name,
-        url: pkg.author.url.replace( "master", pkg.version )
-      },
+      author: pkg.author,
       maintainers: pkg.maintainers,
       licenses: pkg.licenses.map(function( license ) {
         license.url = license.url.replace( "master", pkg.version );
