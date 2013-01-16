@@ -9,12 +9,11 @@ In your web page:
 <script src="jquery.js"></script>
 <script src="dist/jquery.ajaxQueue.min.js"></script>
 <script>
-jQuery("#foo").fadeIn({
-	duration: 1000,
-	easing: function( p ) {
-		// takes a value from 0 -> 1, return scaled format
-		return p;
-	}
+jQuery.ajaxQueue({
+	url: "/ajax",
+	dataType: "json"
+}).done(function( data ) {
+	// ...
 });
 </script>
 ```
