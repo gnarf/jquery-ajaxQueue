@@ -2,7 +2,7 @@
   "name": "jquery.ajaxQueue",
   "title": "jQuery Ajax Queue",
   "description": "A simple queue for ajax requests",
-  "version": "0.1.1pre",
+  "version": "0.1.1",
   "homepage": "https://github.com/gnarf37/jquery-ajaxQueue",
   "author": {
     "name": "Corey Frang",
@@ -13,7 +13,7 @@
     {
       "name": "Corey Frang",
       "email": "gnarf37@gmail.com",
-      "url": "http://gnarf.net"
+      "url": "https://github.com/gnarf37"
     }
   ],
   "repository": {
@@ -36,5 +36,5 @@
     "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#f8da4ff90c7e8f74c81d8e5d3834e6011a90611c",
     "grunt": "0.4.0rc4"
   },
-  "keywords": [ "animation", "effects", "easing" ]
+  "keywords": [ "ajax", "queue" ]
 }

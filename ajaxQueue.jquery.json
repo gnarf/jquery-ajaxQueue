@@ -3,11 +3,10 @@
 	"title": "jQuery Ajax Queue",
 	"description": "A simple queue for ajax requests",
 	"keywords": [
-		"animation",
-		"effects",
-		"easing"
+		"ajax",
+		"queue"
 	],
-	"version": "0.1.1pre",
+	"version": "0.1.1",
 	"author": {
 		"name": "Corey Frang",
 		"url": "https://github.com/gnarf37"
@@ -16,19 +15,19 @@
 		{
 			"name": "Corey Frang",
 			"email": "gnarf37@gmail.com",
-			"url": "http://gnarf.net"
+			"url": "https://github.com/gnarf37"
 		}
 	],
 	"licenses": [
 		{
 			"type": "MIT",
-			"url": "https://github.com/jquery/gnarf37/jquery-ajaxQueue/blob/0.1.1pre/LICENSE-MIT"
+			"url": "https://github.com/jquery/gnarf37/jquery-ajaxQueue/blob/0.1.1/LICENSE-MIT"
 		}
 	],
 	"bugs": "https://github.com/gnarf37/jquery-ajaxQueue/issues",
 	"homepage": "https://github.com/gnarf37/jquery-ajaxQueue",
 	"docs": "https://github.com/gnarf37/jquery-ajaxQueue",
 	"dependencies": {
-		"jquery": ">=1.8"
+		"jquery": ">=1.5"
 	}
 }

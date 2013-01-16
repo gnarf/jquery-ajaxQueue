@@ -102,7 +102,7 @@ module.exports = function(grunt) {
       homepage: pkg.homepage,
       docs: pkg.homepage,
       dependencies: {
-        jquery: ">=1.8"
+        jquery: ">=1.5"
       }
     }, null, "\t" ) );
   });

@@ -28,6 +28,8 @@ _(Coming soon)_
 
 ## Release History
 
+* v0.1.1 - 2013-01-16 
+	* Changed keywords in package file
 * v0.1.0 - 2013-01-16
 * Started as an [answer on Stack Overflow](http://stackoverflow.com/a/3035268/91914).
 
