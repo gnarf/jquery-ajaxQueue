@@ -1,4 +1,4 @@
-/*! jQuery Ajax Queue - v0.1.0 - 2013-01-16
+/*! jQuery Ajax Queue - v0.1.1pre - 2013-01-16
 * https://github.com/gnarf37/jquery-ajaxQueue
 * Copyright (c) 2013 Corey Frang; Licensed MIT */
 (function($) {
