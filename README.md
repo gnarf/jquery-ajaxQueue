@@ -22,7 +22,7 @@ jQuery.ajaxQueue({
 
 This adds a new method to `jQuery`:
 
-### `ajaxQueue( options )` 
+### `jQuery.ajaxQueue( options )` 
 Takes the same parameters as [jQuery.ajax](http://api.jquery.com/jQuery.ajax), returns a promise.  Note that the return value is not a `jqXHR`, but it will behave like one.  The `abort()` method on the return value will remove the request from the queue if it has not begun, or pass it along to the jqXHR's abort method once the request begins.
 
 ## Examples
