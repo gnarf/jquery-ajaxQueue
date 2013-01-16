@@ -6,7 +6,7 @@
 		"ajax",
 		"queue"
 	],
-	"version": "0.1.1",
+	"version": "0.1.2pre",
 	"author": {
 		"name": "Corey Frang",
 		"url": "https://github.com/gnarf37"
@@ -21,7 +21,7 @@
 	"licenses": [
 		{
 			"type": "MIT",
-			"url": "https://github.com/jquery/gnarf37/jquery-ajaxQueue/blob/0.1.1/LICENSE-MIT"
+			"url": "https://github.com/jquery/gnarf37/jquery-ajaxQueue/blob/0.1.2pre/LICENSE-MIT"
 		}
 	],
 	"bugs": "https://github.com/gnarf37/jquery-ajaxQueue/issues",

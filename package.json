@@ -2,7 +2,7 @@
   "name": "jquery.ajaxQueue",
   "title": "jQuery Ajax Queue",
   "description": "A simple queue for ajax requests",
-  "version": "0.1.1",
+  "version": "0.1.2pre",
   "homepage": "https://github.com/gnarf37/jquery-ajaxQueue",
   "author": {
     "name": "Corey Frang",
