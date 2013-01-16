@@ -20,8 +20,6 @@ jQuery.ajaxQueue({
 
 ## Documentation
 
-This adds a new method to `jQuery`:
-
 ### `jQuery.ajaxQueue( options )` 
 Takes the same parameters as [jQuery.ajax](http://api.jquery.com/jQuery.ajax), returns a promise.  Note that the return value is not a `jqXHR`, but it will behave like one.  The `abort()` method on the return value will remove the request from the queue if it has not begun, or pass it along to the jqXHR's abort method once the request begins.
 
@@ -30,7 +28,8 @@ _(Coming soon)_
 
 ## Release History
 
-Started as an [answer on Stack Overflow](http://stackoverflow.com/a/3035268/91914).
+* v0.1.0 - 2013-01-16
+* Started as an [answer on Stack Overflow](http://stackoverflow.com/a/3035268/91914).
 
 ## License
 Copyright (c) 2013 Corey Frang  
