@@ -20,8 +20,10 @@ jQuery.ajaxQueue({
 
 ## Documentation
 
+This pluging creates a new method which ensures only one AJAX request is running at a time.  It waits for the previous request(s) to finish before starting a new one using jQuery's built in queue.
+
 ### `jQuery.ajaxQueue( options )` 
-Takes the same parameters as [jQuery.ajax](http://api.jquery.com/jQuery.ajax), returns a promise.  Note that the return value is not a `jqXHR`, but it will behave like one.  The `abort()` method on the return value will remove the request from the queue if it has not begun, or pass it along to the jqXHR's abort method once the request begins.
+Takes the same options as [jQuery.ajax](http://api.jquery.com/jQuery.ajax), and returns a promise.  The return value is not a `jqXHR`, but it will behave like one.  The `abort()` method on the returned object will remove the request from the queue if it has not begun, or pass it along to the jqXHR's abort method once the request begins.
 
 ## Examples
 _(Coming soon)_
