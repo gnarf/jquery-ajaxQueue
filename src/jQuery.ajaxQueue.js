@@ -10,8 +10,8 @@ $.ajaxQueue = function( ajaxOpts ) {
 
     // run the actual query
     function doRequest( next ) {
-        jqXHR = $.ajax( ajaxOpts )
-            .done( dfd.resolve )
+        jqXHR = $.ajax( ajaxOpts );
+        jqXHR.done( dfd.resolve )
             .fail( dfd.reject )
             .then( next, next );
     }
