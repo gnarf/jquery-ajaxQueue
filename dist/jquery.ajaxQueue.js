@@ -1,4 +1,4 @@
-/*! jQuery Ajax Queue - v0.1.2pre - 2013-01-16
+/*! jQuery Ajax Queue - v0.1.2pre - 2013-03-19
 * https://github.com/gnarf37/jquery-ajaxQueue
 * Copyright (c) 2013 Corey Frang; Licensed MIT */
 (function($) {
@@ -13,8 +13,8 @@ $.ajaxQueue = function( ajaxOpts ) {
 
     // run the actual query
     function doRequest( next ) {
-        jqXHR = $.ajax( ajaxOpts )
-            .done( dfd.resolve )
+        jqXHR = $.ajax( ajaxOpts );
+        jqXHR.done( dfd.resolve )
             .fail( dfd.reject )
             .then( next, next );
     }
