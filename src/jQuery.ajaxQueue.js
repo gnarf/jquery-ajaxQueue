@@ -43,4 +43,8 @@ $.ajaxQueue = function( ajaxOpts ) {
     return promise;
 };
 
+$.ajaxQueue.clear = function() {
+    ajaxQueue.clearQueue();
+}
+
 })(jQuery);
