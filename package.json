@@ -30,11 +30,11 @@
   "dependencies": {},
   "devDependencies": {
     "grunt-contrib-concat": "~0.1.1",
-    "grunt-contrib-watch": "~0.1.0",
-    "grunt-contrib-qunit": "~0.1.0",
-    "grunt-contrib-jshint": "git://github.com/gruntjs/grunt-contrib-jshint.git#7fd70e86c5a8d489095fa81589d95dccb8eb3a46",
-    "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#f8da4ff90c7e8f74c81d8e5d3834e6011a90611c",
-    "grunt": "0.4.0rc4"
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-qunit": "~0.2.2",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt": "~0.4.1"
   },
   "keywords": [ "ajax", "queue" ]
 }
