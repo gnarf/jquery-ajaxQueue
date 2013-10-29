@@ -3,12 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Ajax Queue Test Suite</title>
-	<!-- Load local jQuery. This can be overridden with a ?jquery=___ param. -->
-	<script src="../libs/jquery-loader.js"></script>
-	<!-- Load local QUnit. -->
-	<link rel="stylesheet" href="../libs/qunit/qunit.css" media="screen">
-	<script src="../libs/qunit/qunit.js"></script>
-	<script src="../libs/sinon/sinon.js"></script>
+	<!-- Load jQuery and QUnit from npm dependencies. -->
+	<script src="../node_modules/jquery/tmp/jquery.js"></script>
+	<link rel="stylesheet" href="../node_modules/grunt-contrib-qunit/test/libs/qunit.css" media="screen">
+	<script src="../node_modules/grunt-contrib-qunit/test/libs/qunit.js"></script>
+	<script src="../node_modules/sinon/pkg/sinon.js"></script>
 	<!-- Load local lib and tests. -->
 	<script src="../src/jquery.ajaxQueue.js"></script>
 	<script src="jquery.ajaxQueue_test.js"></script>
