@@ -1,14 +1,22 @@
 (function($) {
 
 // jQuery on an empty object, we are going to use this as our Queue
-var ajaxQueue = $({});
+//var ajaxQueue = $({});
+var ajaxQueueCache=[$({})];
 
-$.ajaxQueue = function( ajaxOpts ) {
-    var jqXHR,
+$.ajaxQueue = function( ajaxOpts , cacheIndex) {
+
+	var jqXHR,
         dfd = $.Deferred(),
-        promise = dfd.promise();
+        promise = dfd.promise(),
+        ajaxQueue;
 
-    // run the actual query
+	cacheIndex=cacheIndex||0;//get cache index.
+	ajaxQueue=ajaxQueueCache[cacheIndex];
+	if(ajaxQueue == undefined || !(ajaxQueue instanceof $)){
+		ajaxQueue=ajaxQueueCache[cacheIndex]=$({});
+	}
+	// run the actual query
     function doRequest( next ) {
         jqXHR = $.ajax( ajaxOpts );
         jqXHR.done( dfd.resolve )
