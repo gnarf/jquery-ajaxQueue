@@ -1,7 +1,8 @@
 (function($) {
 
 // jQuery on an empty object, we are going to use this as our Queue
-var ajaxQueue = $({});
+var ajaxQueue = $({}),
+    runningRequest;
 
 $.ajaxQueue = function( ajaxOpts ) {
     var jqXHR,
@@ -14,6 +15,9 @@ $.ajaxQueue = function( ajaxOpts ) {
         jqXHR.done( dfd.resolve )
             .fail( dfd.reject )
             .then( next, next );
+
+        // point current request to runningRequest in order for clearQueue to cancel the current request
+        runningRequest = jqXHR;
     }
 
     // queue our ajax request
@@ -41,6 +45,15 @@ $.ajaxQueue = function( ajaxOpts ) {
     };
 
     return promise;
+};
+
+$.ajaxQueue.clear = function() {
+    ajaxQueue.clearQueue();
+
+    // cancel the current running request if there is one
+    if ( runningRequest instanceof jQuery ) {
+        runningRequest.abort();
+    }
 };
 
 })(jQuery);
