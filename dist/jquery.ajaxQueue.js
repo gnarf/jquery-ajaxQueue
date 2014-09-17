@@ -54,7 +54,7 @@ $.ajaxQueue.clear = function() {
     ajaxQueue.clearQueue();
 
     // cancel the current running request if there is one
-    if ( runningRequest instanceof jQuery ) {
+    if ( runningRequest ) {
         runningRequest.abort();
     }
 };
