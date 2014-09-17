@@ -16,7 +16,7 @@ $.ajaxQueue = function( ajaxOpts ) {
             .fail( dfd.reject )
             .then( next, next );
 
-        // point current request to runningRequest in order for clearQueue to cancel the current request
+        // point current request to runningRequest in order for clear to cancel the current request
         runningRequest = jqXHR;
     }
 
