@@ -1,10 +1,11 @@
-/*! jQuery Ajax Queue - v0.1.2pre - 2013-03-19
+/*! jQuery Ajax Queue - v0.1.2pre - 2014-09-16
 * https://github.com/gnarf37/jquery-ajaxQueue
 * Copyright (c) 2013 Corey Frang; Licensed MIT */
 (function($) {
 
 // jQuery on an empty object, we are going to use this as our Queue
-var ajaxQueue = $({});
+var ajaxQueue = $({}),
+    runningRequest;
 
 $.ajaxQueue = function( ajaxOpts ) {
     var jqXHR,
@@ -17,6 +18,9 @@ $.ajaxQueue = function( ajaxOpts ) {
         jqXHR.done( dfd.resolve )
             .fail( dfd.reject )
             .then( next, next );
+
+        // point current request to runningRequest in order for clear to cancel the current request
+        runningRequest = jqXHR;
     }
 
     // queue our ajax request
@@ -44,6 +48,15 @@ $.ajaxQueue = function( ajaxOpts ) {
     };
 
     return promise;
+};
+
+$.ajaxQueue.clear = function() {
+    ajaxQueue.clearQueue();
+
+    // cancel the current running request if there is one
+    if ( runningRequest ) {
+        runningRequest.abort();
+    }
 };
 
 })(jQuery);

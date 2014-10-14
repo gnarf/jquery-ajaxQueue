@@ -25,6 +25,9 @@ This pluging creates a new method which ensures only one AJAX request is running
 ### `jQuery.ajaxQueue( options )` 
 Takes the same options as [jQuery.ajax](http://api.jquery.com/jQuery.ajax), and returns a promise.  The return value is not a `jqXHR`, but it will behave like one.  The `abort()` method on the returned object will remove the request from the queue if it has not begun, or pass it along to the jqXHR's abort method once the request begins.
 
+### `jQuery.ajaxQueue.clear()`
+Empties the queue and aborts the current request.
+
 ## Examples
 _(Coming soon)_
 
