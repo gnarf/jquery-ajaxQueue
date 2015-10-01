@@ -16,7 +16,7 @@ $.ajaxQueue = function( ajaxOpts ) {
         jqXHR = $.ajax( ajaxOpts );
         jqXHR.done( dfd.resolve )
             .fail( dfd.reject )
-            .then( next, next );
+            .then( next );
     }
 
     // queue our ajax request
