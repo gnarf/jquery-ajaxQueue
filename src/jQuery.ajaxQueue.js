@@ -8,6 +8,13 @@ $.ajaxQueue = function( ajaxOpts ) {
         dfd = $.Deferred(),
         promise = dfd.promise();
 
+    //  If there is no ajax request return an empty 200 code
+    if (typeof ajaxOpts == "undefined"){
+		return $.Deferred(function() {
+		        this.resolve(['', '200', jqXHR]); 
+		    }).promise();
+    }
+
     // run the actual query
     function doRequest( next ) {
         jqXHR = $.ajax( ajaxOpts );
