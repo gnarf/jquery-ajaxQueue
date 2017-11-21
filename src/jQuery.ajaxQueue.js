@@ -1,19 +1,39 @@
 (function($) {
 
 // jQuery on an empty object, we are going to use this as our Queue
-var ajaxQueue = $({});
+var ajaxQueues = [$({})];
 
-$.ajaxQueue = function( ajaxOpts ) {
+$.ajaxQueue = function( ajaxOpts, queueIndex ) {
     var jqXHR,
         dfd = $.Deferred(),
-        promise = dfd.promise();
+        promise = dfd.promise(),
+        ajaxQueue;
+
+    // allow multiple queues that run independently of each other
+    // specify the queue to be used like this (index can be ommited!):
+    // $.ajaxQueue({<ajaxOpts>}, <int|queueIndex>)
+    queueIndex = queueIndex || 0; // get queue index if specified
+    ajaxQueue = ajaxQueues[queueIndex];
+
+    if ( ajaxQueue == undefined || !(ajaxQueue instanceof $) ) {
+        ajaxQueue = ajaxQueues[queueIndex] = $({});
+    }
+
+    //  if there is no ajax request return an empty 200 code
+    if ( typeof ajaxOpts == "undefined" ) {
+        return $.Deferred(function() {
+            this.resolve( [ '', '200', jqXHR ] );
+        }).promise();
+    }
 
     // run the actual query
     function doRequest( next ) {
-        jqXHR = $.ajax( ajaxOpts );
-        jqXHR.done( dfd.resolve )
-            .fail( dfd.reject )
-            .then( next, next );
+        setTimeout(function() {
+            jqXHR = $.ajax( ajaxOpts );
+            jqXHR.done( dfd.resolve )
+                .fail( dfd.reject )
+                .then( next );
+        }, ajaxOpts.delay||0);
     }
 
     // queue our ajax request
