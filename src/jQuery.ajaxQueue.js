@@ -10,10 +10,12 @@ $.ajaxQueue = function( ajaxOpts ) {
 
     // run the actual query
     function doRequest( next ) {
-        jqXHR = $.ajax( ajaxOpts );
-        jqXHR.done( dfd.resolve )
-            .fail( dfd.reject )
-            .then( next, next );
+        setTimeout(function() {
+            jqXHR = $.ajax( ajaxOpts );
+            jqXHR.done( dfd.resolve )
+                .fail( dfd.reject )
+                .then( next, next );
+        }, ajaxOpts.delay||0);
     }
 
     // queue our ajax request
